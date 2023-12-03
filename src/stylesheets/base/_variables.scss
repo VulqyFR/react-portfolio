@@ -1,0 +1,66 @@
+// This file remains for all variables used in this project
+
+// Colors variables are set as --clr-<theme>-<color>
+
+// Colors light theme
+$--clr-light-primary: #04B9AD;
+$--clr-light-secondary: #55B9B4;
+$--clr-light-accent: #CCD5E0;
+$--clr-light-text: #212121;
+$--clr-light-background: #F0F1F5;
+
+// Colors dark theme
+$--clr-dark-primary: #46FBEF;
+$--clr-dark-secondary: #46AAA5;
+$--clr-dark-accent: #1F2833;
+$--clr-dark-text: #F0F1F5;
+$--clr-dark-background: #212121;
+
+// Fonts
+$--font-roboto: 'Roboto', sans-serif;
+$--font-poppins: 'Poppins', serif;
+
+// Font sizes
+$--font-size-xxs: 0.75em;
+$--font-size-xs: 1em;
+$--font-size-sm: 1.25em;
+$--font-size-md: 1.5em;
+$--font-size-lg: 2em;
+$--font-size-xl: 3em;
+$--font-size-xxl: 3.75em;
+
+// Font weights
+$--font-weight-light: 300;
+$--font-weight-regular: 400;
+$--font-weight-medium: 500;
+$--font-weight-bold: 700;
+
+// Breakpoints
+$--breakpoint-xxs: 768px;
+$--breakpoint-xs: 1024px;
+$--breakpoint-sm: 1280px;
+$--breakpoint-md: 1366px;
+$--breakpoint-lg: 1680px;
+$--breakpoint-xl: 1920px;
+
+// Border radius
+$--border-radius-sm: 5%;
+$--border-radius-md: 10%;
+$--border-radius-lg: 20%;
+$--border-radius-xl: 50%;
+
+// Shadows
+$--shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+$--shadow-md: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+$--shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+
+// Transitions
+$--transition: all 0.3s ease-in-out;
+
+// Line Height 
+$--line-height-xs: 1;
+$--line-height-sm: 1.25;
+$--line-height-md: 1.5;
+$--line-height-lg: 2;
+
+

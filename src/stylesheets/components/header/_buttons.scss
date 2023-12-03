@@ -1,0 +1,11 @@
+// This file is made to handle the styles for the buttons in the header
+
+body.light .navbar__button--contact {
+    border: 1px solid $--clr-dark-background;
+    background: transparent;
+}
+
+body.dark .navbar__button--contact {
+    border: 1px solid $--clr-light-background;
+    background: transparent;
+}
