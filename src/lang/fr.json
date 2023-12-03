@@ -1,0 +1,15 @@
+{
+"navbar": {
+    "home": "Accueil",
+    "projects": "Projets",
+    "technology_watch": "Veilles technologiques",
+    "curiculum_vitae": "Curiculum Vitae",
+    "training_period": "Stages",
+    "certification": "Certifications",
+    "contact": "Contact"
+    },
+"footer": {
+    "privacyPolicy": "Politique de confidentialité",
+    "termsOfService": "Conditions d'utilisation"
+    }
+}
