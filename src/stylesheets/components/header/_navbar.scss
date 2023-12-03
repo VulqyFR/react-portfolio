@@ -1,0 +1,24 @@
+// This file remains for the styles of the navbar in the header
+
+.navbar {
+  width: 100%;
+    .navbar__container {
+      padding: 1rem 5%;
+      @include flexbox($direction: row, $justify: center, $align: center);
+    }
+  
+  .navbar__menu {
+      @include flexbox($direction: row, $justify: space-between, $align: baseline);
+    }
+  
+  .navbar__logo-text, 
+  .navbar__menu-item  {
+      padding: 0 1rem;
+    }
+  .navbar__buttons {
+      @include flexbox($direction: row, $justify: space-between, $align: center);
+      gap: 1rem;
+    }
+  }
+
+
