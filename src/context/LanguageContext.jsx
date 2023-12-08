@@ -2,9 +2,9 @@ import { createContext, useState, useContext, useEffect } from 'react';
 import enData from '../lang/en.json'; 
 import frData from '../lang/fr.json'; 
 
-const LanguageContext = createContext();
+export const LanguageContext = createContext(); 
 
-export const useLanguage = () => {
+export const useLanguageContext = () => {
   return useContext(LanguageContext);
 };
 

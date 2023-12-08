@@ -1,41 +1,37 @@
-import React from 'react'
-import { useLanguage } from '../../context/LanguageContext';
+import { useEffect, useState, React } from 'react'
+import LinkMenu from './LinkMenu';
 import LanguageButton from './LanguageButton';
 import ThemeButton from './ThemeButton';
 import ContactButton from './ContactButton';
+import { useLanguage } from '../../hooks/useLanguage';
+import HamburgerMenu from './HamburgerMenu';
 
 const Navbar = () => { 
   const { languageData } = useLanguage();
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+  const handleScroll = () => {
+    setScrolled(window.scrollY > 0);
+  };
+  window.addEventListener('scroll', handleScroll);
+  return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
         <div className="navbar__container">
             <div className="navbar__logo">
-                <h3 className="navbar__logo-text">Elvin Chauvel</h3>
+                <h3 className="navbar__logo-text">Elvin Chauvel.</h3>
             </div>
-            <ul className="navbar__menu">
-                <li className="navbar__menu-item">
-                    <a href="#" className="navbar__menu-link" id="#">{languageData.navbar.home}</a>
-                </li>
-                <li className="navbar__menu-item">
-                    <a href="#" className="navbar__menu-link" id="#">{languageData.navbar.projects}</a>
-                </li>
-                <li className="navbar__menu-item">
-                    <a href="#" className="navbar__menu-link" id="#">{languageData.navbar.technology_watch}</a>
-                </li>
-                <li className="navbar__menu-item">
-                    <a href="#" className="navbar__menu-link" id="#">{languageData.navbar.curiculum_vitae}</a>
-                </li>
-                <li className="navbar__menu-item">
-                    <a href="#" className="navbar__menu-link" id="#">{languageData.navbar.training_period}</a>
-                </li>
-                <li className="navbar__menu-item">
-                    <a href="#" className="navbar__menu-link" id="#">{languageData.navbar.certification}</a>
-                </li>
-            </ul>
+            <LinkMenu languageData={languageData}/>
             <div className="navbar__buttons">
                 <ThemeButton/>
                 <LanguageButton/>
-                <ContactButton>Contact</ContactButton>
+                <ContactButton languageData={languageData}/>
+                <HamburgerMenu languageData={languageData}/>
             </div>
         </div>
     </nav>
