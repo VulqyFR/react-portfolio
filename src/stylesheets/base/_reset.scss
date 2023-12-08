@@ -1,5 +1,7 @@
 // This file remains to reset the default styles of the browser
 
+@import 'variables';
+
 *, *::before, *::after {
     margin: 0;
     padding: 0;
@@ -13,5 +15,5 @@ body, h1, h2, h3, h4, h5, h6, p, ul, ol {
   }
 
 body {
-    background-color: $--clr-dark-primary;
+    background-color: var(--clr-background);
   }

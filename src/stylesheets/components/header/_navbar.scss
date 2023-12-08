@@ -1,10 +1,18 @@
 // This file remains for the styles of the navbar in the header
-
 .navbar {
   width: 100%;
-    .navbar__container {
-      padding: 1rem 5%;
-      @include flexbox($direction: row, $justify: center, $align: center);
+  height: 10%;
+  position: sticky;
+  top: 0;
+  @include flexbox($direction: row, $justify: center, $align: center);
+
+  &.scrolled {
+    box-shadow: --shadow-lg;
+  }
+  .navbar__container {
+      width: 100%;
+      margin: 1rem 5%;
+      @include flexbox($direction: row, $justify: space-between, $align: center);
     }
   
   .navbar__menu {
@@ -12,12 +20,13 @@
     }
   
   .navbar__logo-text, 
-  .navbar__menu-item  {
-      padding: 0 1rem;
+  .navbar__menu-item,
+  .navbar__buttons {
+      padding: 0 clamp(0.5rem, 1vw, 1rem);
+      white-space: nowrap;
     }
   .navbar__buttons {
-      @include flexbox($direction: row, $justify: space-between, $align: center);
-      gap: 1rem;
+      @include flexbox($direction: row, $justify: center, $align: center);
     }
   }
 

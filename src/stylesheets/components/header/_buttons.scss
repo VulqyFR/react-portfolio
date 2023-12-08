@@ -1,11 +1,106 @@
-// This file is made to handle the styles for the buttons in the header
+@import '../../base/variables';
 
-body.light .navbar__button--contact {
-    border: 1px solid $--clr-dark-background;
+// Keyframes
+
+@keyframes moveCircle {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(269%);
+    }
+}
+
+@keyframes reverseMoveCircle {
+    0% {
+        transform: translateX(265%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+// Button Theme
+
+.navbar__button-theme {
+    background: var(--clr-background);
+    color: var(--clr-text);
+}
+
+.navbar__button-icon {
+    color: var(--clr-text);
+    transition: transform 0.3s ease-in-out;
+    width: 2em;
+    height: 2em;
+}
+.navbar__button-icon-moon {
+    transform: rotate(-162.5deg);
+}
+.navbar__button-icon-sun {
+    transform: rotate(180deg);
+}
+
+.navbar__button--theme {
+    height: 2.75em;
+    width: 9.75em;
+    border-radius: var(--border-radius-xl);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar__button-circle {
+    background-color: var(--clr-background);
+}
+
+.navbar__button-circle{
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 2.60em;
+    width: 2.60em;
+    border-radius: var(--border-radius-xl);
+    margin: 0.075em 0.075em 0.075em 0.075em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar__button-circle.shifted {
+    animation: moveCircle 0.3s ease-in-out forwards;
+}
+
+.navbar__button-circle.not-shifted {
+    animation: reverseMoveCircle 0.3s ease-in-out forwards;
+}
+
+// Button Language
+
+.navbar__button--language,
+.fa-globe {
+    color: var(--clr-text);
     background: transparent;
 }
 
-body.dark .navbar__button--contact {
-    border: 1px solid $--clr-light-background;
+.navbar__button--language {
+    height: 2.5em;
+    width: 2.5em;
+}
+
+.fa-globe {
+    font-size: var(--font-size-md);
+}
+
+// Button Contact
+
+.navbar__button--contact {
+    border: 1px solid var(--clr-text);
     background: transparent;
+    height: 2.75em;
+    width: 9.75em;
+    transition: all 0.125s ease-in-out;
+}
+
+.navbar__button--contact:hover {
+    background: var(--clr-text);
+    color: var(--clr-background);
 }
