@@ -3,7 +3,9 @@ import Navbar from '../components/header/Navbar'
 
 const Home = () => {
   return (
-    <Navbar />
+    <div style={{height: '100vh', position: 'relative'}}>
+      <Navbar />
+    </div>
   )
 }
 

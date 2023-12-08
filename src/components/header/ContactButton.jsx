@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ContactButton = ({children}) => {
+const ContactButton = ({ languageData }) => {
     return (
-    <button className='navbar__button navbar__button--contact'>{children}</button>
+    <button className='navbar__button navbar__button--contact'>{languageData.navbar.contact}</button>
   )
 }
 
