@@ -1,66 +1,65 @@
 // This file handle all typography base styles for the project
 
+@import 'variables';
+
 body {
-  font-family: $--font-roboto;
-  line-height: $--line-height-md;
+  font-family: var(--font-roboto); 
+  line-height: var(--line-height-md); 
+  color: var(--clr-text); 
+  background-color: var(--clr-background); 
 }
 
-body.light {
-  div, a, li, button, input, h1, h2, h3, h4, h5, h6 {
-    color: $--clr-light-text;
-  }
-  background-color: $--clr-light-background;
-}
-
-body.dark {
-  div, a, li, button, input, h1, h2, h3, h4, h5, h6 {
-    color: $--clr-dark-text;
-  }
-  background-color: $--clr-dark-background;
+div, a, li, button, input, h1, h2, h3, h4, h5, h6 {
+  color: var(--clr-text);
+  background-color: var(--clr-background);
 }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: $--font-weight-bold;
-  line-height: $--line-height-lg; 
-  font-family: $--font-poppins;
-}   
+  font-weight: var(--font-weight-bold); 
+  font-family: var(--font-poppins); 
+}
 
 h1 {
-  font-size: $--font-size-xxl;
+  font-size: var(--font-size-xxl);
 }
 
 h2 {
-  font-size: $--font-size-xl;
+  font-size: var(--font-size-xl);
 }
 
 h3 {
-  font-size: $--font-size-lg;
+  font-size: var(--font-size-lg);
 }
 
 h4 {
-  font-size: $--font-size-md;
+  font-size: var(--font-size-md);
 }
 
 h5 {
-  font-size: $--font-size-sm;
+  font-size: var(--font-size-sm);
 }
 
 h6 {
-  font-size: $--font-size-xs;
+  font-size: var(--font-size-xs);
 }
 
 p {
-  font-size: $--font-size-md;
-  line-height: $--line-height-md;
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
 }
 
 a {
-  font-size: $--font-size-md;
+  font-size: var(--font-size-md);
   text-decoration: none;
-  color: $--clr-light-primary;
-  font-family: $--font-roboto;
+  font-family: var(--font-roboto);
 }
 
 ul, ol {
   list-style: none;
+}
+
+button {
+  font-size: var(--font-size-md);
+  border: none;
+  cursor: pointer;
 }
