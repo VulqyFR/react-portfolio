@@ -1,19 +1,21 @@
-import React from 'react'
+import React from 'react';
 
-const HamburgerMenu = ( {languageData} ) => {
-  if (window.innerWidth > 1024) return null;
+const HamburgerMenu = ({ languageData, windowWidth }) => {
+  const SCREEN_SIZE_THRESHOLD = 1024;
   return (
     <>
-    <ul>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Technology Watch</li>
-        <li>Curiculum Vitae</li>
-        <li>Training Period</li>
-        <li>Certification</li>
-    </ul>
+      {windowWidth <= SCREEN_SIZE_THRESHOLD && (
+        <ul>
+          <li>{languageData.navbar.home}</li>
+          <li>{languageData.navbar.projects}</li>
+          <li>{languageData.navbar.technology_watch}</li>
+          <li>{languageData.navbar.curiculum_vitae}</li>
+          <li>{languageData.navbar.training_period}</li>
+          <li>{languageData.navbar.certification}</li>
+        </ul>
+      )}
     </>
-  )
-}
+  );
+};
 
-export default HamburgerMenu
+export default HamburgerMenu;

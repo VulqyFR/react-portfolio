@@ -5,3 +5,5 @@ export const useLanguage = () => {
   const { language, languageData, changeLanguage } = useContext(LanguageContext);
   return { language, languageData, changeLanguage };
 };
+
+export default useLanguage;
