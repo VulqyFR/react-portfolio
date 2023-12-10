@@ -24,7 +24,7 @@ const useResponsiveFontSize = () => {
   }, []);
 
   return {
-    fontSize: fontSize // Retourne un objet avec une propriété fontSize contenant la taille de police calculée
+    fontSize: fontSize 
   };
 };
 

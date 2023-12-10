@@ -11,6 +11,7 @@ const Navbar = () => {
   const { languageData } = useLanguageContext();
   const [scrolled, setScrolled] = useState(false);
   const windowWidth = useWindowSize();
+  const SCREEN_SIZE_THRESHOLD = 1024;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,14 +29,14 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar__container">
         <div className="navbar__logo">
-          <h3 className="navbar__logo-text">Elvin Chauvel.</h3>
+          <h3 className="navbar__logo-text">ELVIN CHAUVEL.</h3>
         </div>
-        <LinkMenu languageData={languageData} windowWidth={windowWidth} />
+        <LinkMenu languageData={languageData} windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
         <div className="navbar__buttons">
-          <ThemeButton />
-          <LanguageButton />
-          <ContactButton languageData={languageData} />
-          <HamburgerMenu languageData={languageData} windowWidth={windowWidth} />
+          <ThemeButton windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
+          <LanguageButton windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
+          <ContactButton languageData={languageData} windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
+          <HamburgerMenu languageData={languageData} windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
         </div>
       </div>
     </nav>

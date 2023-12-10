@@ -7,7 +7,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(269%);
+        transform: translateX(330%);
     }
 }
 
@@ -22,72 +22,74 @@
 
 // Button Theme
 
-.navbar__button-theme {
-    background: var(--clr-background);
-    color: var(--clr-text);
-}
-
-.navbar__button-icon {
-    color: var(--clr-text);
-    transition: transform 0.3s ease-in-out;
-    width: 2em;
+.navbar__button--theme{
+    background-color: var(--clr-text);
+    color: var(--clr-background);
     height: 2em;
-}
-.navbar__button-icon-moon {
-    transform: rotate(-162.5deg);
-}
-.navbar__button-icon-sun {
-    transform: rotate(180deg);
-}
-
-.navbar__button--theme {
-    height: 2.75em;
-    width: 9.75em;
+    width: 8em;
     border-radius: var(--border-radius-xl);
     position: relative;
     transition: transform 0.3s ease-in-out;
-}
 
-.navbar__button-circle {
-    background-color: var(--clr-background);
-}
+    .navbar__button__circle--theme {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.80em;
+        width: 1.80em;
+        margin: 0.1em;
+        border-radius: 50%;
+        background-color: var(--clr-background);
+        @include flexbox( row, center, center);
 
-.navbar__button-circle{
-    position: absolute;
-    left: 0;
-    top: 0;
-    height: 2.60em;
-    width: 2.60em;
-    border-radius: var(--border-radius-xl);
-    margin: 0.075em 0.075em 0.075em 0.075em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+        &.shifted {
+            animation: moveCircle 0.3s ease-in-out forwards;
+        }
 
-.navbar__button-circle.shifted {
-    animation: moveCircle 0.3s ease-in-out forwards;
-}
+        &.not-shifted {
+            animation: reverseMoveCircle 0.3s ease-in-out forwards;
+        }
 
-.navbar__button-circle.not-shifted {
-    animation: reverseMoveCircle 0.3s ease-in-out forwards;
-}
+        &>svg {
+            width: 1em;
+            height: 1em;
+            transition: transform 0.3s ease-in-out;
+        }
 
+        .navbar__button__icon--sun {
+            transform: rotate(180deg);
+        }
+        .navbar__button__icon--moon {
+            transform: rotate(-162.5deg);
+        }
+    }
+}
 // Button Language
 
-.navbar__button--language,
-.fa-globe {
+.navbar__button--language {
     color: var(--clr-text);
     background: transparent;
 }
 
-.navbar__button--language {
-    height: 2.5em;
-    width: 2.5em;
+.navbar__button--language>svg {
+    height: 1em;
+    width: 1em;
 }
 
-.fa-globe {
-    font-size: var(--font-size-md);
+.navbar__button--language--screen {
+    @include flexbox( row, center, center);
+    height: 2em;
+    width: 2em;
+
+    &:hover {
+        background-color: var(--clr-dark);
+        border-radius: var(--border-radius-sm);
+    }
+}
+
+.navbar__button--language--screen>svg {
+    height: 1.5em;
+    width: 1.5em;
 }
 
 // Button Contact
@@ -95,12 +97,32 @@
 .navbar__button--contact {
     border: 1px solid var(--clr-text);
     background: transparent;
-    height: 2.75em;
-    width: 9.75em;
+    height: 2em;
+    width: 8em;
     transition: all 0.125s ease-in-out;
 }
 
 .navbar__button--contact:hover {
     background: var(--clr-text);
     color: var(--clr-background);
+}
+
+// Button Hamburger
+
+.navbar__button--hamburger {
+    @include flexbox( row, center, center);
+    position: relative;
+    .navbar__button--hamburger>svg {
+        height: 1.5em;
+        width: 1.5em;
+    }
+
+    .navbar__submenu--hamburger {
+        @include flexbox( column, center, center);
+        position: absolute;
+        top: 2.5em;
+        right: 0;
+        background-color: var(--clr-dark);
+        border-radius: var(--border-radius-sm);
+    }
 }

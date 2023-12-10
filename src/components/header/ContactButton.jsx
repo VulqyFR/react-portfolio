@@ -1,8 +1,12 @@
 import React from 'react'
 
-const ContactButton = ({ languageData }) => {
+const ContactButton = ({ languageData, windowWidth }) => {
     return (
-    <button className='navbar__button navbar__button--contact'>{languageData.navbar.contact}</button>
+      <>
+      {windowWidth > 1024 && (
+        <button className='navbar__button navbar__button--contact'>{languageData.navbar.contact}</button>
+      )}
+      </>
   )
 }
 

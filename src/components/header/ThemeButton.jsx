@@ -1,26 +1,28 @@
-import { useState, React} from 'react';
+import { React} from 'react';
 import { useTheme } from '../../context/ThemeContext';
-import { MoonIcon, SunIcon } from '@heroicons/react/24/outline';
+import { Sun, Moon } from 'react-feather';
 
-const ThemeButton = () => {
+const ThemeButton = ({ windowWidth, limitWidth }) => {
   const { theme, toggleTheme } = useTheme();
-  const [isShifted, setIsShifted] = useState(false);
 
   const handleToggle = () => {
     toggleTheme();
-    setIsShifted(!isShifted);
   };
 
   return (
-    <button onClick={handleToggle} className={`navbar__button navbar__button--theme ${isShifted ? 'shifted' : 'not-shifted'}`}>
-      <div className='navbar__button-circle'>
-        {theme === 'light' ? (
-          <MoonIcon className='navbar__button-icon navbar__button-icon-moon'/>
-        ) : (
-          <SunIcon className='navbar__button-icon navbar__button-icon-sun'/>
-        )}
-      </div>
-    </button>
+    <>
+    {windowWidth > limitWidth && (
+      <button onClick={handleToggle} className="navbar__button navbar__button--theme">
+        <div className={`navbar__button__circle navbar__button__circle--theme ${theme == 'dark' ? 'not-shifted' : 'shifted'}`}>
+          {theme === 'light' ? (
+            <Moon className={`navbar__button__icon--moon ${theme == 'dark' ? 'not-shifted' : 'shifted'}`}/>
+          ) : (
+            <Sun className={`navbar__button__icon--sun ${theme == 'dark' ? 'not-shifted' : 'shifted'}`}/>
+          )}
+        </div>
+      </button>
+    )}
+    </>
   );
 };
 

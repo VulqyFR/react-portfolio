@@ -27,6 +27,33 @@
     }
   .navbar__buttons {
       @include flexbox($direction: row, $justify: center, $align: center);
+      gap: 1em;
+    }
+    // Submenu
+    .navbar__submenu--wrapper {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 25%;
+      height: 100%;
+      background: #000;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+
+      .navbar__submenu__header--container {
+        @include flexbox($direction: row, $justify: space-between, $align: center);
+
+        .navbar__close-button {
+          @include flexbox($direction: row, $justify: center, $align: center);
+          width: 2em;
+          height: 2em;
+          border-radius: 50%;
+          background: #fff;
+          color: #000;
+          font-size: 1.5em;
+          cursor: pointer;
+        }
+      }
     }
   }
 
