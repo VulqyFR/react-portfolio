@@ -1,0 +1,126 @@
+@import '../../base/variables';
+
+// Keyframes
+
+@keyframes moveCircle {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(330%);
+    }
+}
+
+@keyframes reverseMoveCircle {
+    0% {
+        transform: translateX(265%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+// Button Theme
+
+.navbar__button--theme{
+    background-color: var(--clr-text);
+    color: var(--clr-background);
+    height: 2em;
+    width: 8em;
+    border-radius: var(--border-radius-xl);
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+
+    .navbar__button__circle--theme {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 1.80em;
+        width: 1.80em;
+        margin: 0.1em;
+        border-radius: 50%;
+        background-color: var(--clr-background);
+        @include flexbox( row, center, center);
+
+        &.shifted {
+            animation: moveCircle 0.3s ease-in-out forwards;
+        }
+
+        &.not-shifted {
+            animation: reverseMoveCircle 0.3s ease-in-out forwards;
+        }
+
+        &>svg {
+            width: 1em;
+            height: 1em;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .navbar__button__icon--sun {
+            transform: rotate(180deg);
+        }
+        .navbar__button__icon--moon {
+            transform: rotate(-162.5deg);
+        }
+    }
+}
+// Button Language
+
+.navbar__button--language--screen,
+.navbar__button--language {
+    position: relative;
+}
+
+.navbar__langmenu-list {
+    position: absolute;
+    top: 2.25em;
+    right: -1.75em;
+
+    .navbar__langmenu-list-link>li {
+        font-size: 12px;
+        background: var(--clr-accent);
+        box-shadow: var(--shadow-lg);
+        padding: 1em;
+    }
+
+}
+
+
+// Button Contact
+
+.navbar__button--contact {
+    border: 1px solid var(--clr-text);
+    background: transparent;
+    height: 2em;
+    width: 8em;
+    transition: all 0.125s ease-in-out;
+}
+
+.navbar__button--contact:hover {
+    background: var(--clr-text);
+    color: var(--clr-background);
+}
+
+// Button Hamburger
+
+.navbar__button--hamburger {
+    @include flexbox( row, center, center);
+    position: relative;
+    &:hover {
+        cursor: pointer;
+        background-color: var(--clr-dark);
+        border-radius: var(--border-radius-sm);
+    }
+    .navbar__button__icon--hamburger {
+        height: 1.5em;
+        width: 1.5em;
+    }
+    .navbar__submenu--hamburger {
+        @include flexbox( column, center, center);
+        position: absolute;
+        top: 2.5em;
+        right: 0;
+        background-color: var(--clr-dark);
+        border-radius: var(--border-radius-sm);
+    }
+}

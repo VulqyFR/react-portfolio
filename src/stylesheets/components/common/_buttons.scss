@@ -1,0 +1,16 @@
+@import '../../base/variables';
+.button__primary {
+    background: var(--clr-primary);
+    color: var(--clr-background);
+    border: none;
+    border-radius: var(--border-radius-md);
+    padding: 0.5em 1em;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-bold);
+    transition: all 0.125s ease-in-out;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        background: var(--clr-secondary);
+    }
+}

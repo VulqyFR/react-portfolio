@@ -1,0 +1,65 @@
+// This file handle all typography base styles for the project
+
+@import 'variables';
+
+body {
+  font-family: var(--font-roboto); 
+  line-height: var(--line-height-md); 
+  color: var(--clr-text); 
+  background-color: var(--clr-background); 
+}
+
+div, a, li, button, input, h1, h2, h3, h4, h5, h6 {
+  color: var(--clr-text);
+  background-color: var(--clr-background);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-bold); 
+  font-family: var(--font-poppins); 
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+}
+
+h3 {
+  font-size: var(--font-size-lg);
+}
+
+h4 {
+  font-size: var(--font-size-md);
+}
+
+h5 {
+  font-size: var(--font-size-sm);
+}
+
+h6 {
+  font-size: var(--font-size-xs);
+}
+
+p {
+  font-size: var(--font-size-md);
+  line-height: var(--line-height-md);
+}
+
+a {
+  font-size: var(--font-size-md);
+  text-decoration: none;
+  font-family: var(--font-roboto);
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  font-size: var(--font-size-md);
+  border: none;
+  cursor: pointer;
+}
