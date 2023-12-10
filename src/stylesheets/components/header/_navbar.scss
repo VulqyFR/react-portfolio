@@ -26,8 +26,8 @@
       white-space: nowrap;
     }
 
-  .mobile {
-    font-size: var(--font-size-lg);
+  .navbar__logo-text.mobile {
+    font-size: var(--font-size-xl);
   }
   .navbar__buttons {
       @include flexbox($direction: row, $justify: center, $align: center);

@@ -66,31 +66,25 @@
 }
 // Button Language
 
+.navbar__button--language--screen,
 .navbar__button--language {
-    color: var(--clr-text);
-    background: transparent;
+    position: relative;
 }
 
-.navbar__button--language>svg {
-    height: 1em;
-    width: 1em;
-}
+.navbar__langmenu-list {
+    position: absolute;
+    top: 2.25em;
+    right: -1.75em;
 
-.navbar__button--language--screen {
-    @include flexbox( row, center, center);
-    height: 2em;
-    width: 2em;
-
-    &:hover {
-        background-color: var(--clr-dark);
-        border-radius: var(--border-radius-sm);
+    .navbar__langmenu-list-link>li {
+        font-size: 12px;
+        background: var(--clr-accent);
+        box-shadow: var(--shadow-lg);
+        padding: 1em;
     }
+
 }
 
-.navbar__button--language--screen>svg {
-    height: 1.5em;
-    width: 1.5em;
-}
 
 // Button Contact
 
@@ -112,11 +106,15 @@
 .navbar__button--hamburger {
     @include flexbox( row, center, center);
     position: relative;
-    .navbar__button--hamburger>svg {
+    &:hover {
+        cursor: pointer;
+        background-color: var(--clr-dark);
+        border-radius: var(--border-radius-sm);
+    }
+    .navbar__button__icon--hamburger {
         height: 1.5em;
         width: 1.5em;
     }
-
     .navbar__submenu--hamburger {
         @include flexbox( column, center, center);
         position: absolute;
