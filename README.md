@@ -43,7 +43,7 @@ Pour plus de ressources et guides :
 
 ## Versions
 
-[![Version](https://img.shields.io/badge/version-alpha.0.0.1-blue.svg)](https://semver.org)
+[![Version](https://img.shields.io/badge/Version-alpha.0.0.1-blue.svg)](https://semver.org)
 
 [![React](https://img.shields.io/badge/React-18.2.0-blue.svg)](https://reactjs.org/)
 
