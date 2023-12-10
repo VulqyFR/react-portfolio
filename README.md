@@ -1,4 +1,5 @@
 # **Portfolio**
+![image](https://github.com/VulqyFR/react-portfolio/assets/120416688/040f0f94-031d-4c90-87c6-1147b7718846)
 
 Ce projet est un portfolio personnel développé en utilisant React avec Vite, offrant une configuration minimale pour faciliter le développement et la mise en place rapide.
 
