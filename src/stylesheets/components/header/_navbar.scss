@@ -25,33 +25,70 @@
       padding: 0 clamp(0.5rem, 1vw, 1rem);
       white-space: nowrap;
     }
+
+  .mobile {
+    font-size: var(--font-size-lg);
+  }
   .navbar__buttons {
       @include flexbox($direction: row, $justify: center, $align: center);
       gap: 1em;
+      transition: transform 1s ease-in-out;
     }
     // Submenu
     .navbar__submenu--wrapper {
       position: fixed;
+      padding: 2% 1%;
       top: 0;
       right: 0;
-      width: 25%;
+      width: 40%;
       height: 100%;
-      background: #000;
+      background: var(--clr-accent);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       z-index: 999;
+      transform: translateX(0, 100%);
 
       .navbar__submenu__header--container {
         @include flexbox($direction: row, $justify: space-between, $align: center);
-
+        background: var(--clr-accent);
+        .navbar__logo-text {
+          background: var(--clr-accent);
+          padding: 0 .25em;
+        }
         .navbar__close-button {
           @include flexbox($direction: row, $justify: center, $align: center);
-          width: 2em;
-          height: 2em;
-          border-radius: 50%;
-          background: #fff;
-          color: #000;
+          width: 2.5em;
+          height: 2.5em;
+          border-radius: var(--border-radius-md);
+          background: var(--clr-dark);
           font-size: 1.5em;
           cursor: pointer;
+
+          &>svg {
+            height: 2em;
+            width: 2em;
+            padding: 0;
+            color: var(--clr-text);
+          }
+        }
+      }
+      .navbar__submenu-list {
+        @include flexbox($direction: column, $justify: flex-start, $align: flex-start);
+        gap: 1em;
+        padding: 1em 0;
+        background: var(--clr-accent);
+        .navbar__submenu-list-link {
+          border-radius: var(--border-radius-sm);
+          background: var(--clr-accent);
+          padding: 0.5em 0.5em;
+          color: var(--clr-text);
+          font-size: var(--font-size-lg);
+          font-weight: var(--font-weight-medium);
+          transition: all 0.125s ease-in-out;
+          width: 100%;
+
+          &:hover {
+            background: var(--clr-dark);
+          }
         }
       }
     }

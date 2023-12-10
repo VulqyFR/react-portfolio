@@ -4,7 +4,7 @@ import LanguageButton from './LanguageButton';
 import ThemeButton from './ThemeButton';
 import ContactButton from './ContactButton';
 import useLanguageContext from '../../hooks/useLanguageContext';
-import HamburgerMenu from './HamburgerMenu';
+import SubMenu from './SubMenu';
 import useWindowSize from '../../hooks/useWindowSize';
 
 const Navbar = () => {
@@ -29,14 +29,14 @@ const Navbar = () => {
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="navbar__container">
         <div className="navbar__logo">
-          <h3 className="navbar__logo-text">ELVIN CHAUVEL.</h3>
+          <h3 className={`navbar__logo-text ${windowWidth < SCREEN_SIZE_THRESHOLD ? 'mobile' : ''}`}>ELVIN CHAUVEL.</h3>
         </div>
         <LinkMenu languageData={languageData} windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
         <div className="navbar__buttons">
           <ThemeButton windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
           <LanguageButton windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
           <ContactButton languageData={languageData} windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
-          <HamburgerMenu languageData={languageData} windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
+          <SubMenu languageData={languageData} windowWidth={windowWidth} limitWidth={SCREEN_SIZE_THRESHOLD}/>
         </div>
       </div>
     </nav>
