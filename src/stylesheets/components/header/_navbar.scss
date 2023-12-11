@@ -42,16 +42,20 @@
       right: 0;
       width: 40%;
       height: 100%;
-      background: var(--clr-accent);
+      background: var(--clr-background-light);
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
       z-index: 999;
       transform: translateX(0, 100%);
 
+      .navbar__submenu {
+        background: var(--clr-accent);
+      }
+
       .navbar__submenu__header--container {
         @include flexbox($direction: row, $justify: space-between, $align: center);
-        background: var(--clr-accent);
+        background: var(--clr-background-light);
         .navbar__logo-text {
-          background: var(--clr-accent);
+          background: var(--clr-background-light);
           padding: 0 .25em;
         }
         .navbar__close-button {
@@ -59,7 +63,7 @@
           width: 2.5em;
           height: 2.5em;
           border-radius: var(--border-radius-md);
-          background: var(--clr-dark);
+          background: var(--clr-text);
           font-size: 1.5em;
           cursor: pointer;
 
@@ -67,7 +71,7 @@
             height: 2em;
             width: 2em;
             padding: 0;
-            color: var(--clr-text);
+            color: var(--clr-background);
           }
         }
       }
@@ -75,10 +79,10 @@
         @include flexbox($direction: column, $justify: flex-start, $align: flex-start);
         gap: 1em;
         padding: 1em 0;
-        background: var(--clr-accent);
+        background: var(--clr-background-light);
         .navbar__submenu-list-link {
           border-radius: var(--border-radius-sm);
-          background: var(--clr-accent);
+          background: var(--clr-background-light);
           padding: 0.5em 0.5em;
           color: var(--clr-text);
           font-size: var(--font-size-lg);
@@ -87,7 +91,7 @@
           width: 100%;
 
           &:hover {
-            background: var(--clr-dark);
+            background: var(--clr-background-dark);
           }
         }
       }

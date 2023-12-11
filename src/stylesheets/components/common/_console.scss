@@ -1,0 +1,73 @@
+@import '../../base/variables';
+
+.console {
+  background-color: var(--clr-background-dark);
+  width: 36em;
+  height: 36em;
+  border-radius: 0px 0px 20px 20px;
+  stroke: var(--clr-background-dark, 50%);
+  .console__header-tab {
+    background-color: var(--clr-background-light);
+    padding: 1em 2em 0em 1em;
+    border-radius: 20px 20px 0 0;
+    .console__header-tab-title {
+        padding: .5em 1em 0em 1em;
+        border-radius: 10px 10px 0 0;
+        background-color: var(--clr-background-dark);
+        color: var(--clr-text);
+        font-size: var(--font-size-xs);
+        font-family: var(--font-roboto);
+        font-weight: var(--font-wight-bold);
+        width: fit-content;
+      }
+  }
+  .console__command-container {
+    background-color: var(--clr-background-dark);
+    height: 30em;
+    overflow-y: scroll;
+    padding: 1em 1em 0em 1em;
+    scrollbar-width: thin;
+    scrollbar-color: var(--clr-text) var(--clr-background-dark);
+
+    &>p {
+        font-size: var(--font-size-xs);
+    }
+  
+    &::-webkit-scrollbar {
+      width: .5em;
+    }
+  
+    &::-webkit-scrollbar-track {
+      background: var(--clr-background-dark);
+    }
+  
+    &::-webkit-scrollbar-thumb {
+      background: var(--clr-text);
+    }
+  }
+  .console__output-line {
+    color: var(--clr-text);
+    font-size: var(--font-size-xs);
+    font-family: var(--font-roboto);
+    font-weight: var(--font-weight-light);
+  }
+    
+  .console__input-wrapper {
+    display: flex;
+    align-items: center;
+    background: var(--clr-background-dark);
+    .console__input {
+        outline: none;
+        border: none;
+        background: var(--clr-background-dark);
+        font-size: var(--font-size-xs);
+    }
+    .console__input-prefix {
+        margin-right: 5px;
+        background: var(--clr-background-dark);
+    }
+    .console__input {
+        flex-grow: 1;
+    }
+  }
+}

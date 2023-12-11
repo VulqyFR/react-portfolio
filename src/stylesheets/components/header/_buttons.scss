@@ -70,6 +70,10 @@
 .navbar__button--language {
     position: relative;
 }
+.navbar__button--language--screen>svg {
+    height: 2em;
+    width: 2em;
+}
 
 .navbar__langmenu-list {
     position: absolute;
@@ -78,13 +82,12 @@
 
     .navbar__langmenu-list-link>li {
         font-size: 12px;
-        background: var(--clr-accent);
+        background: var(--clr-background-light);
         box-shadow: var(--shadow-lg);
         padding: 1em;
     }
 
 }
-
 
 // Button Contact
 
@@ -108,19 +111,19 @@
     position: relative;
     &:hover {
         cursor: pointer;
-        background-color: var(--clr-dark);
+        background-color: var(--clr-background-dark);
         border-radius: var(--border-radius-sm);
     }
     .navbar__button__icon--hamburger {
-        height: 1.5em;
-        width: 1.5em;
+        height: 2em;
+        width: 2em;
     }
     .navbar__submenu--hamburger {
         @include flexbox( column, center, center);
         position: absolute;
         top: 2.5em;
         right: 0;
-        background-color: var(--clr-dark);
+        background-color: var(--clr-background-dark);
         border-radius: var(--border-radius-sm);
     }
 }
