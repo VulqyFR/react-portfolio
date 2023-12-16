@@ -7,13 +7,13 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(330%);
+        transform: translateX(220%);
     }
 }
 
 @keyframes reverseMoveCircle {
     0% {
-        transform: translateX(265%);
+        transform: translateX(220%);
     }
     100% {
         transform: translateX(0);
@@ -26,7 +26,7 @@
     background-color: var(--clr-text);
     color: var(--clr-background);
     height: 2em;
-    width: 8em;
+    width: 6em;
     border-radius: var(--border-radius-xl);
     position: relative;
     transition: transform 0.3s ease-in-out;
@@ -95,7 +95,7 @@
     border: 1px solid var(--clr-text);
     background: transparent;
     height: 2em;
-    width: 8em;
+    width: 6em;
     transition: all 0.125s ease-in-out;
 }
 

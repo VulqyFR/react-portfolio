@@ -15,7 +15,7 @@ body[data-theme='dark'] {
     --clr-background: #212121 !important;
     --clr-background-dark: #1C1C1C !important;
     --clr-text: #DEDEDE !important;
-    --clr-dark-text: #BEBEBE !important;
+    --clr-dark-text: #858585 !important;
 }
 
 :root {
@@ -27,6 +27,7 @@ body[data-theme='dark'] {
     --clr-background-dark: #1C1C1C ;
     --clr-text: #DEDEDE ;
     --clr-dark-text: #BEBEBE ;
+    --clr-gradient: linear-gradient(90deg, var(--clr-primary), var(--clr-secondary));
 
     /* Fonts */
     --font-roboto: 'Roboto', sans-serif;

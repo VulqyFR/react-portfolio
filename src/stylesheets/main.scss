@@ -16,7 +16,11 @@
 // Common
 @import 'components/common/buttons';
 @import 'components/common/console';
+@import 'components/common/introduction';
 
 // Header
 @import 'components/header/navbar';
 @import 'components/header/buttons';
+
+// Pages
+@import 'components/pages/home';

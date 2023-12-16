@@ -4,14 +4,16 @@
   height: 10%;
   position: sticky;
   top: 0;
+  margin: 1rem 6em;
   @include flexbox($direction: row, $justify: center, $align: center);
 
-  &.scrolled {
+  .navbar.scrolled {
+    margin: 1rem 6em;
     box-shadow: --shadow-lg;
   }
   .navbar__container {
       width: 100%;
-      margin: 1rem 5%;
+      height: 100%;
       @include flexbox($direction: row, $justify: space-between, $align: center);
     }
   
@@ -19,15 +21,15 @@
       @include flexbox($direction: row, $justify: space-between, $align: baseline);
     }
   
-  .navbar__logo-text, 
   .navbar__menu-item,
   .navbar__buttons {
-      padding: 0 clamp(0.5rem, 1vw, 1rem);
+      padding: 0 clamp(0.4rem, .8vw, .8rem);
       white-space: nowrap;
     }
 
   .navbar__logo-text.mobile {
     font-size: var(--font-size-xl);
+    padding: 0 clamp(.5rem, 1vw, 1rem);
   }
   .navbar__buttons {
       @include flexbox($direction: row, $justify: center, $align: center);
@@ -56,7 +58,8 @@
         background: var(--clr-background-light);
         .navbar__logo-text {
           background: var(--clr-background-light);
-          padding: 0 .25em;
+          padding-right: .25em;
+          white-space: nowrap;
         }
         .navbar__close-button {
           @include flexbox($direction: row, $justify: center, $align: center);

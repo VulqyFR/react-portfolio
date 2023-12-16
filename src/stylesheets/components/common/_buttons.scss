@@ -10,6 +10,7 @@
     transition: all 0.125s ease-in-out;
     text-align: center;
     cursor: pointer;
+    width: 100%;
     &:hover {
         background: var(--clr-secondary);
     }
