@@ -8,8 +8,34 @@
     "certification": "Certifications",
     "contact": "Contact"
     },
+"introduction": {
+    "news": "🎉 A new technology watch has been written !",
+    "title": "Hi, I'm",
+    "job": "Student in BTS SIO",
+    "at": "at",
+    "description": "I’m actually in the second year of my BTS at Saint-Adjutor which is located at Vernon. I would like to move towards the web application development in the near future.",
+    "about": "About"
+},
+"console": {
+    "title": "Console",
+    "description": "Here is a console that allows you to contact me. You can use the following commands:",
+    "commands": {
+        "error": "is not recognized as a cmdlet, type 'help' to display the list of available commands",
+        "help": "Availables commands are : vim, regex, clear",
+        "vim" : "The mouse was invented in 1963 by Douglas Engelbart of the Stanford Research Institute and introduced to the public in 1968.",
+        "regex" : "Day 1: *Typing regex for email*, 10 years later : *Typing regex for email*",
+        "clear": "Clear console",
+        "contact": "Show contact information",
+        "social": "Show links to my social networks",
+        "projects": "Show the list of my projects",
+        "technology_watch": "Show the list of my technology watches",
+        "curiculum_vitae": "Show my CV",
+        "training_period": "Show the list of my stages",
+        "certification": "Show the list of my certifications"
+        }
+    },
 "footer": {
-    "privacyPolicy": "Politique de confidentialité",
-    "termsOfService": "Conditions d'utilisation"
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service"
     }
 }

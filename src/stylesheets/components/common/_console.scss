@@ -2,8 +2,7 @@
 
 .console {
   background-color: var(--clr-background-dark);
-  width: 36em;
-  height: 36em;
+  width: 40%;
   border-radius: 0px 0px 20px 20px;
   stroke: var(--clr-background-dark, 50%);
   .console__header-tab {
@@ -23,7 +22,7 @@
   }
   .console__command-container {
     background-color: var(--clr-background-dark);
-    height: 30em;
+    height: 40em;
     overflow-y: scroll;
     padding: 1em 1em 0em 1em;
     scrollbar-width: thin;
@@ -34,7 +33,7 @@
     }
   
     &::-webkit-scrollbar {
-      width: .5em;
+      width: .25em;
     }
   
     &::-webkit-scrollbar-track {
