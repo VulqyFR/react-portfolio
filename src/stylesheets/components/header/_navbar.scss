@@ -15,101 +15,110 @@
   }
 
   .navbar__container {
-      width: 100%;
-      height: 100%;
-      @include flexbox($direction: row, $justify: space-between, $align: center);
-    }
-  
+    width: 100%;
+    height: 100%;
+    @include flexbox($direction: row, $justify: space-between, $align: center);
+  }
+
   .navbar__menu {
-      @include flexbox($direction: row, $justify: space-between, $align: baseline);
-    }
-  
+    @include flexbox(
+      $direction: row,
+      $justify: space-between,
+      $align: baseline
+    );
+  }
+
   .navbar__menu-item,
   .navbar__buttons {
-      padding: 0 clamp(0.4rem, .8vw, .8rem);
-      white-space: nowrap;
-    }
-  
+    padding: 0 clamp(0.4rem, 0.8vw, 0.8rem);
+    white-space: nowrap;
+  }
+
   .navbar__menu-link {
     &:hover {
       text-decoration: underline;
       text-underline-offset: 0.25em;
-
     }
   }
 
   .navbar__logo-text.mobile {
     font-size: var(--font-size-xl);
-    padding: 0 clamp(.5rem, 1vw, 1rem);
+    padding: 0 clamp(0.5rem, 1vw, 1rem);
   }
   .navbar__buttons {
-      @include flexbox($direction: row, $justify: center, $align: center);
-      gap: 1em;
-      transition: transform 1s ease-in-out;
+    @include flexbox($direction: row, $justify: center, $align: center);
+    gap: 1em;
+    transition: transform 1s ease-in-out;
+  }
+  // Submenu
+  .navbar__submenu--wrapper {
+    position: fixed;
+    padding: 2% 1%;
+    top: 0;
+    right: 0;
+    width: 40%;
+    height: 100%;
+    background: var(--clr-background-light);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    transform: translateX(0, 100%);
+
+    .navbar__submenu {
+      background: var(--clr-accent);
     }
-    // Submenu
-    .navbar__submenu--wrapper {
-      position: fixed;
-      padding: 2% 1%;
-      top: 0;
-      right: 0;
-      width: 40%;
-      height: 100%;
+
+    .navbar__submenu__header--container {
+      @include flexbox(
+        $direction: row,
+        $justify: space-between,
+        $align: center
+      );
       background: var(--clr-background-light);
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      z-index: 999;
-      transform: translateX(0, 100%);
-
-      .navbar__submenu {
-        background: var(--clr-accent);
-      }
-
-      .navbar__submenu__header--container {
-        @include flexbox($direction: row, $justify: space-between, $align: center);
+      .navbar__logo-text {
         background: var(--clr-background-light);
-        .navbar__logo-text {
-          background: var(--clr-background-light);
-          padding-right: .25em;
-          white-space: nowrap;
-        }
-        .navbar__close-button {
-          @include flexbox($direction: row, $justify: center, $align: center);
-          width: 2.5em;
-          height: 2.5em;
-          border-radius: var(--border-radius-md);
-          background: var(--clr-text);
-          font-size: 1.5em;
-          cursor: pointer;
+        padding-inline: 0.25em 0.25em;
+        white-space: nowrap;
+      }
+      .navbar__close-button {
+        @include flexbox($direction: row, $justify: center, $align: center);
+        width: 2.5em;
+        height: 2.5em;
+        border-radius: var(--border-radius-md);
+        background: var(--clr-text);
+        font-size: 1.5em;
+        cursor: pointer;
 
-          &>svg {
-            height: 2em;
-            width: 2em;
-            padding: 0;
-            color: var(--clr-background);
-          }
+        & > svg {
+          height: 2em;
+          width: 2em;
+          padding: 0;
+          color: var(--clr-background);
         }
       }
-      .navbar__submenu-list {
-        @include flexbox($direction: column, $justify: flex-start, $align: flex-start);
-        gap: 1em;
-        padding: 1em 0;
+    }
+    .navbar__submenu-list {
+      @include flexbox(
+        $direction: column,
+        $justify: flex-start,
+        $align: flex-start
+      );
+      gap: 1em;
+      padding: 1em 0;
+      background: var(--clr-background-light);
+      .navbar__submenu-list-link {
+        border-radius: var(--border-radius-sm);
         background: var(--clr-background-light);
-        .navbar__submenu-list-link {
-          border-radius: var(--border-radius-sm);
-          background: var(--clr-background-light);
-          padding: 0.5em 0.5em;
-          color: var(--clr-text);
-          font-size: var(--font-size-lg);
-          font-weight: var(--font-weight-medium);
-          transition: all 0.125s ease-in-out;
-          width: 100%;
+        padding: 0.5em 0.5em;
+        color: var(--clr-text);
+        font-size: var(--font-size-lg);
+        font-weight: var(--font-weight-medium);
+        transition: all 0.125s ease-in-out;
+        width: 100%;
 
-          &:hover {
-            background: var(--clr-background-dark);
-          }
+        &:hover {
+          background: var(--clr-background-dark);
         }
       }
     }
   }
-
-
+}
