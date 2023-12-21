@@ -2,7 +2,8 @@
 
 Ce projet est un portfolio personnel développé en utilisant React avec Vite, offrant une configuration minimale pour faciliter le développement et la mise en place rapide.
 
-![Aperçu du Portfolio](https://github.com/VulqyFR/react-portfolio/assets/120416688/040f0f94-031d-4c90-87c6-1147b7718846)
+![image](https://github.com/VulqyFR/react-portfolio/assets/120416688/9dd32c6c-9b74-4f04-9f18-6d3093dbb108)
+
 
 ## Fonctionnalités
 - **React avec Vite :** Utilisation de Vite pour la création rapide de projets React avec un temps de démarrage ultra-rapide et des rechargements à chaud (HMR) pour un flux de travail de développement fluide.
