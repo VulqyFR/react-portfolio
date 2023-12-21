@@ -1,6 +1,6 @@
 import React, { useState, useCallback } from "react";
 import { useLanguageContext } from "../../hooks/useLanguageContext";
-import { Globe } from "react-feather";
+import { Globe } from "lucide-react";
 
 const LanguageButton = ({ isMobileView }) => {
   const { language, changeLanguage } = useLanguageContext();

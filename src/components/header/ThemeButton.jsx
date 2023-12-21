@@ -1,49 +1,43 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { useTheme } from "../../context/ThemeContext";
-import { Sun, Moon } from "react-feather";
+import { Moon, Sun } from "lucide-react";
 
 const handleToggle = (toggleTheme) => {
   toggleTheme();
 };
 
-const ThemeButton = ({ isMobileView }) => {
+const ThemeButton = () => {
   const { theme, toggleTheme } = useTheme();
 
   return (
     <>
-      {!isMobileView && (
-        <button
-          onClick={() => handleToggle(toggleTheme)}
-          className="navbar__button navbar__button--theme"
+      <button
+        onClick={() => handleToggle(toggleTheme)}
+        className="navbar__button navbar__button--theme"
+      >
+        <div
+          className={`navbar__button__circle navbar__button__circle--theme ${
+            theme == "dark" ? "not-shifted" : "shifted"
+          }`}
         >
-          <div
-            className={`navbar__button__circle navbar__button__circle--theme ${
-              theme == "dark" ? "not-shifted" : "shifted"
-            }`}
-          >
-            {theme === "light" ? (
-              <Moon
-                className={`navbar__button__icon--moon ${
-                  theme == "dark" ? "not-shifted" : "shifted"
-                }`}
-              />
-            ) : (
-              <Sun
-                className={`navbar__button__icon--sun ${
-                  theme == "dark" ? "not-shifted" : "shifted"
-                }`}
-              />
-            )}
-          </div>
-        </button>
-      )}
+          {theme === "light" ? (
+            <Moon
+              className={`navbar__button__icon--moon ${
+                theme == "dark" ? "not-shifted" : "shifted"
+              }`}
+            />
+          ) : (
+            <Sun
+              className={`navbar__button__icon--sun ${
+                theme == "dark" ? "not-shifted" : "shifted"
+              }`}
+            />
+          )}
+        </div>
+      </button>
     </>
   );
-};
-
-ThemeButton.propTypes = {
-  isMobileView: PropTypes.bool.isRequired,
 };
 
 export default ThemeButton;

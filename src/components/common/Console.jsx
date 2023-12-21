@@ -25,7 +25,6 @@ const Console = ({ languageData }) => {
     if (event.key === "Enter") {
       if (command === "clear") {
         setOutput([]);
-        setReload(!reload);
       } else {
         setOutput((prevOutput) => [
           ...prevOutput,

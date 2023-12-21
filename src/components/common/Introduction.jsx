@@ -1,14 +1,12 @@
 import React from "react";
-import { ButtonAbout } from "./Button";
+import { ButtonAbout } from "./Buttons";
 import Social from "./Social";
-import { GitHub } from "react-feather";
-import { Twitter } from "react-feather";
-import { Linkedin } from "react-feather";
+import { Github, Linkedin, Twitter } from "lucide-react";
 
 const Introduction = ({ languageData }) => {
   return (
-    <>
-      <div className="introduction">
+    <div className="introduction">
+      <div className="introduction__container--blur">
         <div className="introduction__news">
           <p className="introduction__news-title">
             {languageData.introduction.news}
@@ -32,12 +30,24 @@ const Introduction = ({ languageData }) => {
         </div>
         <ButtonAbout>{languageData.introduction.about}</ButtonAbout>
         <div className="introduction__socials">
-          <Social href="your_href" Icon={GitHub} />
-          <Social href="your_href" Icon={Twitter} />
-          <Social href="your_href" Icon={Linkedin} />
+          <Social
+            href="https://github.com/VulqyFR"
+            target="_blank"
+            Icon={Github}
+          />
+          <Social
+            href="https://twitter.com/elvinchauvel"
+            target="_blank"
+            Icon={Twitter}
+          />
+          <Social
+            href="https://www.linkedin.com/in/elvin-chauvel-69800827a/"
+            target="_blank"
+            Icon={Linkedin}
+          />
         </div>
       </div>
-    </>
+    </div>
   );
 };
 export default Introduction;

@@ -32,7 +32,7 @@ const Navbar = ({ isMobileView }) => {
         </div>
         <LinkMenu languageData={languageData} isMobileView={isMobileView} />
         <div className="navbar__buttons">
-          <ThemeButton isMobileView={isMobileView} />
+          <ThemeButton />
           <LanguageButton isMobileView={isMobileView} />
           <ContactButton
             languageData={languageData}

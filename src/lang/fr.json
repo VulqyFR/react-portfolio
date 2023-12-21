@@ -1,5 +1,5 @@
 {
-"navbar": {
+  "navbar": {
     "home": "Accueil",
     "projects": "Projets",
     "technology_watch": "Veilles technologiques",
@@ -7,35 +7,35 @@
     "training_period": "Stages",
     "certification": "Certifications",
     "contact": "Contact"
-    },
-"introduction": {
-    "news": "🎉 Une nouvelle veille technologique telle qu'elle a été écrite !",
+  },
+  "introduction": {
+    "news": "🎉 Une nouvelle veille technologique a été écrite !",
     "title": "Salut, je m'appelle",
     "job": "Étudiant en BTS SIO",
     "at": "à",
     "description": "Je suis actuellement en deuxième année de mon BTS à Saint-Adjutor qui se situe à Vernon. J'aimerais m'orienter vers le développement d'applications web dans un futur proche.",
     "about": "À propos"
-    },
-"console": {
+  },
+  "console": {
     "title": "Console",
     "description": "Voici une console qui vous permet de me contacter. Vous pouvez utiliser les commandes suivantes :",
     "commands": {
-        "error": "commande inconnue, tapez 'help' pour afficher la liste des commandes disponibles",
-        "help": "Les commandes disponibles sont : vim, regex, clear",
-        "vim" : "La souris a été inventée en 1963 par Douglas Engelbart du Stanford Research Institute et présentée au public en 1968.",
-        "regex" : "Jour 1 : *Saisie d'une regex pour l'e-mail*, 10 ans plus tard : *Saisie d'une regex pour l'e-mail*",
-        "clear": "Efface la console",
-        "contact": "Affiche les informations de contact",
-        "social": "Affiche les liens vers mes réseaux sociaux",
-        "projects": "Affiche la liste de mes projets",
-        "technology_watch": "Affiche la liste de mes veilles technologiques",
-        "curiculum_vitae": "Affiche mon CV",
-        "training_period": "Affiche la liste de mes stages",
-        "certification": "Affiche la liste de mes certifications"
-        }
-    },
-"footer": {
+      "error": "commande inconnue, tapez 'help' pour afficher la liste des commandes disponibles",
+      "help": "Les commandes disponibles sont : vim, regex, clear",
+      "vim": "La souris a été inventée en 1963 par Douglas Engelbart du Stanford Research Institute et présentée au public en 1968.",
+      "regex": "Jour 1 : *Saisie d'une regex pour l'e-mail*, 10 ans plus tard : *Saisie d'une regex pour l'e-mail*",
+      "clear": "Efface la console",
+      "contact": "Affiche les informations de contact",
+      "social": "Affiche les liens vers mes réseaux sociaux",
+      "projects": "Affiche la liste de mes projets",
+      "technology_watch": "Affiche la liste de mes veilles technologiques",
+      "curiculum_vitae": "Affiche mon CV",
+      "training_period": "Affiche la liste de mes stages",
+      "certification": "Affiche la liste de mes certifications"
+    }
+  },
+  "footer": {
     "privacyPolicy": "Politique de confidentialité",
     "termsOfService": "Conditions d'utilisation"
-    }
+  }
 }

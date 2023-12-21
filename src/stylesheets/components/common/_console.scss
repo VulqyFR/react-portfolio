@@ -1,24 +1,23 @@
-@import '../../base/variables';
+@import "../../base/variables";
 
 .console {
   background-color: var(--clr-background-dark);
-  width: 40%;
-  border-radius: 0px 0px 20px 20px;
+  width: 45%;
   stroke: var(--clr-background-dark, 50%);
   .console__header-tab {
     background-color: var(--clr-background-light);
     padding: 1em 2em 0em 1em;
     border-radius: 20px 20px 0 0;
     .console__header-tab-title {
-        padding: .5em 1em 0em 1em;
-        border-radius: 10px 10px 0 0;
-        background-color: var(--clr-background-dark);
-        color: var(--clr-text);
-        font-size: var(--font-size-xs);
-        font-family: var(--font-roboto);
-        font-weight: var(--font-wight-bold);
-        width: fit-content;
-      }
+      padding: 0.5em 1em 0em 1em;
+      border-radius: 10px 10px 0 0;
+      background-color: var(--clr-background-dark);
+      color: var(--clr-text);
+      font-size: var(--font-size-xs);
+      font-family: var(--font-roboto);
+      font-weight: var(--font-wight-bold);
+      width: fit-content;
+    }
   }
   .console__command-container {
     background-color: var(--clr-background-dark);
@@ -28,18 +27,18 @@
     scrollbar-width: thin;
     scrollbar-color: var(--clr-text) var(--clr-background-dark);
 
-    &>p {
-        font-size: var(--font-size-xs);
+    & > p {
+      font-size: var(--font-size-xs);
     }
-  
+
     &::-webkit-scrollbar {
-      width: .25em;
+      width: 0.25em;
     }
-  
+
     &::-webkit-scrollbar-track {
       background: var(--clr-background-dark);
     }
-  
+
     &::-webkit-scrollbar-thumb {
       background: var(--clr-text);
     }
@@ -50,23 +49,56 @@
     font-family: var(--font-roboto);
     font-weight: var(--font-weight-light);
   }
-    
+
   .console__input-wrapper {
     display: flex;
     align-items: center;
     background: var(--clr-background-dark);
     .console__input {
-        outline: none;
-        border: none;
-        background: var(--clr-background-dark);
-        font-size: var(--font-size-xs);
+      outline: none;
+      border: none;
+      background: var(--clr-background-dark);
+      font-size: var(--font-size-xs);
     }
     .console__input-prefix {
-        margin-right: 5px;
-        background: var(--clr-background-dark);
+      margin-right: 5px;
+      background: var(--clr-background-dark);
     }
     .console__input {
-        flex-grow: 1;
+      flex-grow: 1;
     }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .console {
+    width: 75%;
+    .console__header-tab {
+      background-color: var(--clr-background-light);
+      padding: 2em 4em 0em 2em;
+      .console__header-tab-title {
+        padding: 1em 2em 0em 2em;
+        border-radius: 10px 10px 0 0;
+        font-size: var(--font-size-md);
+      }
+    }
+  }
+  .console__command-container {
+    background-color: var(--clr-background-dark);
+    height: 60em !important;
+    overflow-y: scroll;
+    padding: 1em 1em 0em 1em;
+    scrollbar-width: thin;
+    scrollbar-color: var(--clr-text) var(--clr-background-dark);
+
+    & > p {
+      font-size: var(--font-size-md) !important;
+    }
+  }
+  .console__input-prefix {
+    font-size: var(--font-size-md) !important;
+  }
+  .console__input {
+    font-size: var(--font-size-md) !important;
   }
 }

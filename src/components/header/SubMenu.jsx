@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { Menu, X } from "react-feather";
-import ButtonContact from "../common/Button";
+import ButtonContact from "../common/Buttons";
+import { Menu, X } from "lucide-react";
 
 const HamburgerMenu = ({ languageData, isMobileView }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
