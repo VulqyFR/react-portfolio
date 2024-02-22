@@ -8,65 +8,12 @@ body {
   line-height: 1.5;
   margin: 0;
   &.theme--dark {
-    background-color: #1e1e1e;
+    background-color: #111313;
     color: #d0dae5;
   }
   &.theme--light {
     background-color: #f0f0f0;
-    color: #1e1e1e;
-  }
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  font-weight: 700;
-  margin: 0;
-  @include default.themed {
-    color: default.t("text");
-  }
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-}
-
-h3 {
-  font-size: 1.25rem;
-}
-
-h4 {
-  font-size: 1rem;
-}
-
-h5 {
-  font-size: 0.875rem;
-}
-
-h6 {
-  font-size: 0.75rem;
-}
-
-p {
-  font-size: 1rem;
-  line-height: 1.5;
-}
-
-a {
-  text-decoration: none;
-  &:hover {
-    text-decoration: underline;
-  }
-  @include default.themed {
-    color: default.t("primary");
+    color: #111313;
   }
 }
 
@@ -80,7 +27,7 @@ button {
     outline: none;
   }
   @include default.themed {
-    color: default.t("primary");
+    color: default.t("text");
   }
 }
 
